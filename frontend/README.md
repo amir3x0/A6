@@ -12,7 +12,7 @@ In the project directory, you can run:
 
 if you get an error you will need to run first
 
-### 'npm install'
+### `npm install`
 
 #####################################
 
