@@ -1,11 +1,13 @@
 require('dotenv').config();
 
 const express = require('express');
+// const path = require('../frontend/build');
 const mongoose = require('mongoose'); // Import the database
 const cors = require('cors'); // Require the CORS package
 const recipeRoutes = require('./routes/recipes');
 const userRoutes = require("./routes/users");
 const ingredientRoutes = require("./routes/ingredientRoutes");
+
 
 // Express app
 const app = express();
@@ -22,6 +24,8 @@ app.use((req, res, next) => {
 app.use("/users", userRoutes);
 app.use('/recipes', recipeRoutes);
 app.use('/ingredient', ingredientRoutes);
+// app.use(express.static(path));
+
 
 // Connect to MongoDB & listen for requests
 mongoose.connect(process.env.MONGO_URI)
