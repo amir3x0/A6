@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/A6/static/css/main.757b152f.css",
+    "main.js": "/A6/static/js/main.ba161d1c.js",
+    "static/media/shrimp.png": "/A6/static/media/shrimp.5ad74d51cc7bda5d3c24.png",
+    "static/media/planBg.jpg": "/A6/static/media/planBg.1e541ad4493948ff0158.jpg",
+    "static/media/Healthy.jpg": "/A6/static/media/Healthy.f8d998ab6414d1316896.jpg",
+    "static/media/shakshuka.png": "/A6/static/media/shakshuka.3db179a3a4bdb77a7140.png",
+    "static/media/sign.png": "/A6/static/media/sign.6ea123debbe0bd3bc4d5.png",
+    "static/media/hummus.png": "/A6/static/media/hummus.798f52792bb821ead8eb.png",
+    "static/media/pasta.png": "/A6/static/media/pasta.30b943f27fe75edc8b88.png",
+    "static/media/snails.png": "/A6/static/media/snails.87356370bafd673dfc6b.png",
+    "static/media/toast.png": "/A6/static/media/toast.ae49188b947f6ec52824.png",
+    "static/media/HungryHungry.jpg": "/A6/static/media/HungryHungry.25ebb2808f45da2437d8.jpg",
+    "static/media/hamburger.png": "/A6/static/media/hamburger.16efe826b836c921f709.png",
+    "index.html": "/A6/index.html",
+    "main.757b152f.css.map": "/A6/static/css/main.757b152f.css.map",
+    "main.ba161d1c.js.map": "/A6/static/js/main.ba161d1c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.757b152f.css",
+    "static/js/main.ba161d1c.js"
+  ]
+}
