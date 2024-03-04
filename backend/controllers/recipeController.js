@@ -1,27 +1,28 @@
-const Recipe = require('../models/RecipesModel')
-const mongoose = require('mongoose')
+const Recipe = require('../models/RecipesModel');
+const mongoose = require('mongoose');
 // get all recipes
 const getRecipes = async (req, res) => {
-    const recipes = await Recipe.find({}).sort({createdAt: -1})
+    const recipes = await Recipe.find({}).sort({createdAt: -1});
 
-    res.status(200).json(recipes)
-}
+    res.status(200).json(recipes);
+};
 
 // get a single recipe
 const getRecipe = async (req, res) => {
-    const { id } = req.params
-    
+    const { id } = req.params;
+    console.log(id);
     if(!mongoose.Types.ObjectId.isValid(id)){
-        return res.status(404).json({error: 'No such recipe'})
+        return res.status(404).json({error: 'No such recipe'});
     }
-    const recipe = await Recipe.findById(id)
+    const recipe = await Recipe.findById(id);
 
     if(!recipe) {
-        return res.status(404).json({error: 'No such recipe'})
+        return res.status(404).json({error: 'No such recipe'});
     }
 
-    res.status(200).json(recipe)
-}
+    res.status(200).json(recipe);
+    console.log(recipe);
+};
 // create new recipe
 const createRecipe = async (req, res) => {
     const { title, difficulty, category, description, instructions, ingredients, calories, picture } = req.body;
@@ -56,25 +57,25 @@ const deleteRecipe = async (req, res) =>{
     const { id } = req.params
 
     if(!mongoose.Types.ObjectId.isValid(id)){ //Check if the id is valid
-        return res.status(404).json({error: 'No such recipe'})
+        return res.status(404).json({error: 'No such recipe'});
     }
 
-    const recipe = await Recipe.findOneAndDelete({_id: id})
+    const recipe = await Recipe.findOneAndDelete({_id: id});
 
     if(!recipe) { // check if there is such object whit this id in the db
-        return res.status(404).json({error: 'No such recipe'})
+        return res.status(404).json({error: 'No such recipe'});
     }
 
-    res.status(200).json(recipe)
+    res.status(200).json(recipe);
 
-}
+};
 
 // update a recipe
 const updateRecipe = async (req, res)=> {
     const { id } = req.params
 
     if(!mongoose.Types.ObjectId.isValid(id)){ //Check if the id is valid
-        return res.status(404).json({error: 'No such recipe'})
+        return res.status(404).json({error: 'No such recipe'});
     }
 
     const recipe = await Recipe.findOneAndUpdate({_id: id},{
@@ -82,11 +83,11 @@ const updateRecipe = async (req, res)=> {
     })
 
     if(!recipe) { // check if there is such object whit this id in the db
-        return res.status(404).json({error: 'No such recipe'})
+        return res.status(404).json({error: 'No such recipe'});
     }
 
-    res.status(200).json(recipe)
-}
+    res.status(200).json(recipe);
+};
 
 module.exports = {
     getRecipe,
@@ -94,4 +95,4 @@ module.exports = {
     createRecipe,
     deleteRecipe,
     updateRecipe
-}
+};

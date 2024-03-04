@@ -13,7 +13,7 @@ const router = express.Router()
 router.get('/', getRecipes)
 
 //Get single recipe
-router.get('/:id', getRecipe)
+router.get('/findone/:id', getRecipe)
 
 //Post a new recipe
 router.post('/',createRecipe)
